@@ -1,6 +1,8 @@
 # Tēla Veidotājs – Unity 2D Projekts
 
 ## Pār spēli
+<img width="1106" height="617" alt="{A2C78E2B-E074-46A1-A2ED-3BBD8AF09292}" src="https://github.com/user-attachments/assets/b690081e-9d4a-44d0-bb77-d174f08587ce" />
+<img width="1104" height="617" alt="{7C72944F-0420-405C-91E8-0199ABFED1C2}" src="https://github.com/user-attachments/assets/aa202a17-0c67-40d2-b4a8-2a80ff49c0d3" />
 
 Tēla Veidotājs ir Unity 2D projekts, kurā lietotājs var izveidot un apģerbt tēlu, izmantojot interaktīvus UI elementus. Projekts demonstrē darbu ar Unity UI komponentēm, ainu pārslēgšanu, lietotāja ievades apstrādi, vilkšanas un nomešanas (Drag & Drop) mehānismu, kā arī skaņas integrāciju.
 
@@ -17,11 +19,11 @@ Lietotājs var:
 
 ## TODO
 
-- [ ] Izveidot divas ainas (Galvenā izvēlne un Tēla veidotājs).
-- [ ] Ieviest tēla izvēli ar Dropdown un dinamisku aprakstu.
-- [ ] Realizēt vecuma aprēķinu no ievadītā dzimšanas gada.
-- [ ] Izveidot aprīkojuma kategorijas ar Toggle un vismaz 3 vienībām katrā.
-- [ ] Ieviest Drag & Drop mehānismu aprīkojuma pievienošanai.
-- [ ] Pievienot 2 Slider elementus tēla izmēra maiņai.
-- [ ] Integrēt fona mūziku un pogu skaņas efektus.
-- [ ] Sagatavot projekta gala versiju (Windows build).
+- [X] Izveidot divas ainas (Galvenā izvēlne un Tēla veidotājs).
+- [X] Ieviest tēla izvēli ar Dropdown un dinamisku aprakstu.
+- [X] Realizēt vecuma aprēķinu no ievadītā dzimšanas gada.
+- [X] Izveidot aprīkojuma kategorijas ar Toggle un vismaz 3 vienībām katrā.
+- [X] Ieviest Drag & Drop mehānismu aprīkojuma pievienošanai.
+- [X] Pievienot 2 Slider elementus tēla izmēra maiņai.
+- [X] Integrēt fona mūziku un pogu skaņas efektus.
+- [X] Sagatavot projekta gala versiju (Windows build).
