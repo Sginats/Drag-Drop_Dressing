@@ -20,21 +20,26 @@ namespace TelaVeidotajs
         /// <param name="eventData">Pointer event data.</param>
         public void OnDrop(PointerEventData eventData)
         {
+            Debug.Log($"[DropSlot] OnDrop called on {gameObject.name}");
+            
             GameObject droppedObject = eventData.pointerDrag;
 
             if (droppedObject == null)
                 return;
 
-            DragItem dragItem = droppedObject.GetComponent<DragItem>();
+            // Pārliecināmies, ka objekts ir velkams DraggableItem
+            DraggableItem dragItem = droppedObject.GetComponent<DraggableItem>();
             if (dragItem == null)
                 return;
 
             ItemCategory itemCategory = droppedObject.GetComponent<ItemCategory>();
             if (itemCategory == null || itemCategory.category != slotCategory)
             {
+                Debug.Log($"[DropSlot] Category mismatch: {itemCategory?.category} != {slotCategory}");
                 return;
             }
 
+            Debug.Log($"[DropSlot] Equipping {droppedObject.name} to {gameObject.name}");
             EquipItem(droppedObject, dragItem);
         }
 
@@ -42,15 +47,15 @@ namespace TelaVeidotajs
         /// Equips the item to this slot, replacing any existing item.
         /// </summary>
         /// <param name="item">Item GameObject to equip.</param>
-        /// <param name="dragItem">DragItem component of the item.</param>
-        private void EquipItem(GameObject item, DragItem dragItem)
+        /// <param name="dragItem">DraggableItem component of the item.</param>
+        private void EquipItem(GameObject item, DraggableItem dragItem)
         {
             if (currentEquippedItem != null)
             {
-                DragItem previousDrag = currentEquippedItem.GetComponent<DragItem>();
+                DraggableItem previousDrag = currentEquippedItem.GetComponent<DraggableItem>();
                 if (previousDrag != null)
                 {
-                    previousDrag.ReturnToOriginal();
+                    previousDrag.ReturnToCloset();
                 }
             }
 

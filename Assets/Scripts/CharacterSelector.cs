@@ -37,10 +37,13 @@ namespace TelaVeidotajs
         /// <param name="index">Selected character index.</param>
         public void OnCharacterChanged(int index)
         {
+            Debug.Log($"[CharacterSelector] OnCharacterChanged called with index: {index}");
+            
             if (characters == null || index < 0 || index >= characters.Length)
                 return;
 
             CharacterData selected = characters[index];
+            Debug.Log($"[CharacterSelector] Selected character: {selected.name}");
 
             if (characterImage != null && selected.sprite != null)
             {

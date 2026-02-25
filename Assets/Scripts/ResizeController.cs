@@ -31,6 +31,8 @@ namespace TelaVeidotajs
         /// <param name="value">Slider value for width scale.</param>
         public void OnWidthChanged(float value)
         {
+            Debug.Log($"[ResizeController] OnWidthChanged: {value}");
+            
             if (characterTransform != null)
             {
                 Vector3 scale = characterTransform.localScale;
@@ -45,6 +47,8 @@ namespace TelaVeidotajs
         /// <param name="value">Slider value for height scale.</param>
         public void OnHeightChanged(float value)
         {
+            Debug.Log($"[ResizeController] OnHeightChanged: {value}");
+            
             if (characterTransform != null)
             {
                 Vector3 scale = characterTransform.localScale;

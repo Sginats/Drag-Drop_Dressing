@@ -19,6 +19,7 @@ namespace TelaVeidotajs
         /// </summary>
         public void CalculateAge()
         {
+            Debug.Log("[AgeCalculator] CalculateAge CLICKED");
             AudioManager.Instance?.PlayClickSound();
 
             if (birthYearInput == null || ageResultText == null)
@@ -44,6 +45,7 @@ namespace TelaVeidotajs
             string characterName = string.IsNullOrEmpty(nameInput?.text) ? "Tēls" : nameInput.text;
 
             ageResultText.text = $"{characterName} ir {age} gadi.";
+            Debug.Log($"[AgeCalculator] Result: {ageResultText.text}");
         }
     }
 }

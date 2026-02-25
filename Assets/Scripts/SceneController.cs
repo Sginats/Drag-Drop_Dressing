@@ -22,6 +22,7 @@ namespace TelaVeidotajs
         /// </summary>
         public void LoadMenuScene()
         {
+            Debug.Log("[SceneController] LoadMenuScene CLICKED");
             AudioManager.Instance?.PlayClickSound();
             SceneManager.LoadScene("Menu");
         }

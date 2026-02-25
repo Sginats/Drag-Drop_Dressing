@@ -26,9 +26,12 @@ namespace TelaVeidotajs
         /// <param name="isOn">Toggle state.</param>
         public void OnToggleChanged(bool isOn)
         {
+            Debug.Log($"[ToggleCategory] {gameObject.name} OnToggleChanged: {isOn}");
+            
             if (itemsPanel != null)
             {
                 itemsPanel.SetActive(isOn);
+                Debug.Log($"[ToggleCategory] Panel {itemsPanel.name} set active: {isOn}");
             }
         }
     }
